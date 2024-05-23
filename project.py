@@ -5,7 +5,8 @@ import threading
 from project_util import translate_html
 from mtTkinter import *
 from datetime import datetime
-
+import collections
+collections.Callable = collections.abc.Callable
 #======================
 # Code for retrieving and parsing
 # Google and Yahoo News feeds
@@ -231,7 +232,7 @@ def read_trigger_config(filename):
 # Main Execution
 #======================
 
-SLEEPTIME = 120  # seconds
+SLEEPTIME = 1  # seconds
 
 def main_thread(master):
         # A sample trigger list - you might need to change the phrases to correspond
